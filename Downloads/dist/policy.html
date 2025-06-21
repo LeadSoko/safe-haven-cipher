@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencify-Agent portal</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="../node_modules/preline/preline.js">
+    <link rel="stylesheet" href="../node_modules/preline/dist/tabs.js">
+
+</head>
+
+<body class="bg-gray-50 dark:bg-slate-900">
+    <section class="py-12 bg-white sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Header -->
+                <div class="px-0 py-0 grid gap-3 md:flex md:justify-between md:items-center">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-200">
+                            Checkout
+                        </h2>
+                        <p class="text-sm py-2 text-gray-600 dark:text-gray-400">
+                            Awesome! Confirm your vehicle schedules to checkout now!
+                        </p>
+                    </div>
+
+                    <div class="flex py-2 px-3 gap-x-2">
+                        <div class="inline-flex gap-x-2">
+                            <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">
+                                Cancel quote
+                            </a>
+                            <a href="">
+                                <div class="hs-dropdown relative inline-flex [--placement:top-left]">
+
+                                    <div class="hs-dropdown-menu w-72 transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden z-10 bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700" aria-labelledby="hs-dropup">
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                        Valuation letter
+                                      </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                       Quote draft
+                                      </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                        Certificates
+                                      </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                        Document_name
+                                      </a>
+                                    </div>
+                                </div>
+
+                                <div class="inline-flex">
+                                    <button type="button" class="relative py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-s-md border border-gray-200 bg-white text-gray-800 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800">
+                                      Documents
+                                    </button>
+                                    <div class="hs-dropdown relative inline-flex [--placement:top-left]">
+                                        <button id="hs-split-dropup" type="button" class="hs-dropdown-toggle relative -ms-[.3125rem] py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-e-md border border-gray-200 bg-gray-100 text-gray-800 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-800 dark:hover:bg-slate-700 dark:border-gray-700 dark:text-white dark:hover:text-white">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                        <svg class="hs-dropdown-open:rotate-180 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                          <path d="m18 15-6-6-6 6"></path>
+                                        </svg>
+                                      </button>
+
+                                        <div class="hs-dropdown-menu w-72 transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden z-10 bg-white shadow-md rounded-lg p-2 mt-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700" aria-labelledby="hs-split-dropup">
+                                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                                Valuation letter
+                                              </a>
+                                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                               Quote draft
+                                              </a>
+                                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                                Certificates
+                                              </a>
+                                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700" href="#">
+                                                Document_name
+                                              </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">
+                                Email quote
+                            </a>
+                            <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">
+                                Add vehicle
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Header -->
+                <div class="grid grid-cols-1 mt-8 lg:grid-cols-5 lg:items-start xl:grid-cols-6 gap-y-10 lg:gap-x-12 xl:gap-x-16">
+                    <div class="lg:sticky lg:order-2 lg:top-6 lg:col-span-2">
+                        <div class="overflow-hidden rounded bg-gray-50">
+                            <div class="px-4 py-6 sm:p-6 lg:p-8">
+                                <h3 class="text-xl font-bold text-gray-900">Order details</h3>
+
+                                <div class="flow-root mt-8">
+                                    <ul class="divide-y divide-gray-200 -my-7">
+                                        <li class="flex items-stretch justify-between space-x-5 py-7">
+                                            <div class="flex-shrink-0">
+                                                <img class=" object-contain w-16 h-16 rounded-lg" src="allianz logo 5.png" alt="" />
+                                            </div>
+
+                                            <div class="flex flex-col justify-between flex-1 ml-5">
+                                                <div class="flex-1">
+                                                    <p class="text-base font-bold text-gray-900">KBA 123K</p>
+                                                    <p class="mt-1 text-sm font-medium text-gray-500">
+                                                        Comprehensive,Motor private</p>
+                                                </div>
+                                                <p class="mt-2 text-sm font-bold text-gray-500">#Qt02/2222/24</p>
+                                            </div>
+
+                                            <div class="ml-auto">
+                                                <button type="button" class="inline-flex p-2 -m-2 text-gray-400 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:text-gray-900">
+                                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+
+                                <hr class="mt-6 border-gray-200" />
+
+                                <div class="flow-root mt-5">
+                                    <div class="-my-2 0">
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">Cert number: 128504I</p>
+                                            <p class="text-sm font-medium text-right text-gray-900">Status: Unpaid</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">Pay ref no: n/a</p>
+
+                                        </div>
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">05-MAR-2024 to 05-JUN-2024</p>
+                                        </div>
+                                        <hr class="mt-6 border-gray-200" />
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">Payment plan</p>
+                                            <a href="">
+                                                <p class="text-sm font-medium text-right underline text-red-600">Annual
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">Sum assured</p>
+                                            <p class="text-sm font-medium text-right text-gray-600">1,100,000</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">Basic premium</p>
+                                            <p class="text-sm font-medium text-right text-gray-600">100,490</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">Future annual premium</p>
+                                            <p class="text-sm font-medium text-right text-gray-600">100,490</p>
+                                        </div>
+
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">Commission</p>
+                                            <p class="text-sm font-medium text-right text-green-600">5000</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-medium text-gray-600">WHT (16%)</p>
+                                            <p class="text-sm font-medium text-right text-gray-600">750</p>
+                                        </div>
+                                        <hr class="mt-6 border-gray-200" />
+                                        <div class="flex items-center justify-between py-2">
+                                            <p class="text-sm font-bold text-gray-900">Total payable premium</p>
+                                            <p class="text-sm font-bold text-right text-gray-900">KES 100,490</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <button type="button" class="inline-flex items-center justify-center w-full px-6 py-4 text-sm font-bold text-white transition-all duration-200 bg-red-600 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-700">
+                                        Confirm payment
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- accord -->
+                        <div class="hs-accordion-group">
+                            <div class="hs-accordion active" id="hs-basic-with-arrow-heading-one">
+                                <button class="hs-accordion-toggle hs-accordion-active:text-red-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-red-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400"
+                                    aria-controls="hs-basic-with-arrow-collapse-one">
+                                    <svg class="hs-accordion-active:hidden block size-4"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                    <svg class="hs-accordion-active:block hidden size-4"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m18 15-6-6-6 6"></path>
+                                    </svg>
+                                    Information
+                                </button>
+                                <div id="hs-basic-with-arrow-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-arrow-heading-one">
+                                    <p class="text-gray-800 dark:text-gray-200">
+                                        here
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="hs-accordion" id="hs-basic-with-arrow-heading-three">
+                                <button class="hs-accordion-toggle hs-accordion-active:text-red-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-red-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400"
+                                    aria-controls="hs-basic-with-arrow-collapse-three">
+                                    <svg class="hs-accordion-active:hidden block size-4"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                    <svg class="hs-accordion-active:block hidden size-4"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m18 15-6-6-6 6"></path>
+                                    </svg>
+                                    Terms and Conditions
+                                </button>
+                                <div id="hs-basic-with-arrow-collapse-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-arrow-heading-three">
+                                    <span>
+                                        <p class="text-gray-900 dark:text-gray-200">
+                                            Basic Excess:
+                                        </p>
+                                    </span>
+                                    <p class="text-gray-500">5% of claim, minimum Ksh.5000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- accord -->
+                        <hr class="mt-6 border-gray-200" />
+                        <div class="flex items-center justify-between py-2">
+                            <p class="text-sm font-medium text-gray-600">KBA 123K</p>
+                            <a href="">
+                                <p class="text-sm font-medium text-right underline text-gray-600">View benefits</p>
+                            </a>
+                        </div>
+                        <hr class="mt-2 border-gray-200" />
+                        <div class="flex items-center justify-between py-2">
+                            <p class="text-sm font-medium text-gray-600">KDD 040G</p>
+                            <a href="">
+                                <p class="text-sm font-medium text-right underline text-gray-600">View benefits</p>
+                            </a>
+                        </div>
+                        <hr class="mt-2 border-gray-200" />
+
+                    </div>
+
+                    <div class="pt-6 border-t border-gray-200 lg:order-1 lg:col-span-3 xl:col-span-4">
+                        <div class="flow-root">
+                            <div class="divide-y divide-gray-200 -my-7">
+                                <div class="py-7">
+                                    <h2 class="text-base font-bold text-gray-900">Client Information</h2>
+
+                                    <div class="mt-6">
+                                        <label for="" class="text-sm font-medium text-gray-600"> Select Client |
+                                        </label>
+                                        <a class="py-4 border-red-600 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-red-500 rounded-lg shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            href="#">
+                                            Create new Client
+                                        </a>
+                                        <div class="mt-2">
+                                            <select id="" name="" class="block w-full py-3 pl-4 pr-10 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900">
+                                                <option value="">JOHN DOE</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="py-7">
+                                    <h2 class="text-base font-bold text-gray-900">1. Sum insured: 1,000,000 premium: 47,500
+                                    </h2>
+
+                                    <div class="grid grid-cols-1 mt-6 sm:grid-cols-3 gap-y-5 gap-x-6">
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Reg No. </label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Make </label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+
+
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Model </label>
+                                            <div class="mt-2">
+                                                <select id="" name="" class="block w-full py-3 pl-4 pr-10 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900">
+                                                    <option value="">Saloon</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Body type </label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+
+
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Color </label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Self declared
+                                                value</label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="KES 100,0000" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Sitting
+                                                capacity</label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Chassis no.</label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Engine no.</label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Log book
+                                                No..</label>
+                                            <div class="mt-2">
+                                                <input type="text" id="" name="" placeholder="" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="py-7">
+                                    <h2 class="text-base font-bold text-gray-900">2. Required Documents</h2>
+
+                                    <div class="grid grid-cols-1 mt-6 sm:grid-cols-3 gap-y-5 gap-x-6">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="mb-2 inline-block text-neutral-500 dark:text-neutral-400">Upload
+                                                Log book</label>
+                                            <input class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-surface transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:me-3 file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-e file:border-solid file:border-inherit file:bg-transparent file:px-3  file:py-[0.32rem] file:text-surface focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none dark:border-white/70 dark:text-white  file:dark:text-white"
+                                                type="file" id="formFile" />
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="formFile" class="mb-2 inline-block text-neutral-500 dark:text-neutral-400">Upload
+                                                Driver's license</label>
+                                            <input class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-surface transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:me-3 file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-e file:border-solid file:border-inherit file:bg-transparent file:px-3  file:py-[0.32rem] file:text-surface focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none dark:border-white/70 dark:text-white  file:dark:text-white"
+                                                type="file" id="formFile" />
+                                        </div>
+
+
+                                        <div class="mb-3">
+                                            <label for="formFile" class="mb-2 inline-block text-neutral-500 dark:text-neutral-400">Upload
+                                                Client ID/passport</label>
+                                            <input class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-surface transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:me-3 file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-e file:border-solid file:border-inherit file:bg-transparent file:px-3  file:py-[0.32rem] file:text-surface focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none dark:border-white/70 dark:text-white  file:dark:text-white"
+                                                type="file" id="formFile" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="py-7">
+                                    <h2 class="text-base font-bold text-gray-900">3. Valuer</h2>
+
+                                    <div class="grid grid-cols-1 mt-6 sm:grid-cols gap-y-5 gap-x-6">
+                                        <div>
+                                            <label for="" class="text-sm font-medium text-gray-600"> Select valuer
+                                            </label>
+                                            <div class="mt-2">
+                                                <select id="" name="" class="block w-full py-3 pl-4 pr-10 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900">
+                                                    <option value="">Regent</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="py-7">
+                                    <h2 class="text-base font-bold text-gray-900">4. Payment Options</h2>
+
+                                    <div class="grid grid-cols-1 mt-6 sm:grid-cols gap-y-5 gap-x-6">
+                                        <div class="flex">
+                                            <input type="radio" name="hs-default-radio" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-red-600 focus:ring-red-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-red-500 dark:checked:border-red-500 dark:focus:ring-offset-gray-800"
+                                                id="hs-default-radio">
+                                            <label for="hs-default-radio" class="text-sm text-gray-900 ms-2 dark:text-gray-400">Pay a full premium
+                                                of KE 100,4900.00</label>
+                                        </div>
+
+                                        <div class="flex">
+                                            <input type="radio" name="hs-default-radio" class="shrink-0 mt-0.5 border-gray-200  rounded-full text-red-600 focus:ring-red-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-red-500 dark:checked:border-red-500 dark:focus:ring-offset-gray-800"
+                                                id="hs-checked-radio" checked="">
+                                            <label for="hs-checked-radio" class="text-sm text-red-600 ms-2 dark:text-gray-400">Pay first
+                                                instalment of KE 33,496.70</label>
+                                        </div>
+                                        <div class="flex">
+                                            <input type="radio" name="hs-default-radio" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-red-600 focus:ring-red-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-red-500 dark:checked:border-red-500 dark:focus:ring-offset-gray-800"
+                                                id="hs-default-radio">
+                                            <label for="hs-default-radio" class="text-sm text-gray-00 ms-2 dark:text-gray-400">Others</label>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="py-7">
+                                    <h2 class="text-base font-bold text-gray-900">5. Payment method</h2>
+
+                                    <div class="mt-6 space-y-4">
+                                        <div class="bg-white border-2 border-gray-900 rounded-md">
+                                            <div class="px-4 py-5 sm:p-6">
+                                                <div class="flex items-center">
+                                                    <div>
+                                                        <span class="hidden">
+                                                            <svg class="w-6 h-6 text-gray-300" viewBox="0 0 22 22"
+                                                                fill="none" stroke="currentColor"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="11" cy="11" r="10.25" stroke-width="1.5" />
+                                                            </svg>
+                                                        </span>
+
+                                                        <span>
+                                                            <svg class="w-6 h-6" viewBox="0 0 22 22" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="11" cy="11" r="11" fill="#18181B" />
+                                                                <path
+                                                                    d="M6.91699 11.5833L9.25033 13.9166L15.0837 8.08331"
+                                                                    stroke="white" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="ml-4">
+                                                        <p class="text-base font-bold text-gray-900">Mpesa</p>
+                                                        <p class="mt-1 text-sm font-medium text-gray-500">One click Mpesa payment </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid grid-cols-2 mt-5 sm:grid-cols-4 gap-x-6 gap-y-5">
+                                                    <div class="col-span-2 sm:col-span-4">
+                                                        <label for="" class="text-sm font-medium text-gray-600"> Mpesa
+                                                            number </label>
+                                                        <div class="mt-2">
+                                                            <input type="text" name="" id="" placeholder="0708834885" class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900" />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-white border-2 border-gray-200 rounded-md">
+                                            <div class="px-4 py-5 sm:p-6">
+                                                <div class="flex items-center">
+                                                    <div>
+                                                        <span>
+                                                            <svg class="w-6 h-6 text-gray-300" viewBox="0 0 22 22"
+                                                                fill="none" stroke="currentColor"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="11" cy="11" r="10.25" stroke-width="1.5" />
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="hidden">
+                                                            <svg class="w-6 h-6" viewBox="0 0 22 22" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="11" cy="11" r="11" fill="#18181B" />
+                                                                <path
+                                                                    d="M6.91699 11.5833L9.25033 13.9166L15.0837 8.08331"
+                                                                    stroke="white" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="ml-4">
+                                                        <p class="text-base font-bold text-gray-900">Credit Card</p>
+                                                        <p class="mt-1 text-sm font-medium text-gray-500">Visa, Mastercard, American Amex</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-white border-2 border-gray-200 rounded-md">
+                                            <div class="px-4 py-5 sm:p-6">
+                                                <div class="flex items-center">
+                                                    <div>
+                                                        <span>
+                                                            <svg class="w-6 h-6 text-gray-300" viewBox="0 0 22 22"
+                                                                fill="none" stroke="currentColor"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="11" cy="11" r="10.25" stroke-width="1.5" />
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="hidden">
+                                                            <svg class="w-6 h-6" viewBox="0 0 22 22" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="11" cy="11" r="11" fill="#18181B" />
+                                                                <path
+                                                                    d="M6.91699 11.5833L9.25033 13.9166L15.0837 8.08331"
+                                                                    stroke="white" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="ml-4">
+                                                        <p class="text-base font-bold text-gray-900">Pesa Link</p>
+                                                        <p class="mt-1 text-sm font-medium text-gray-500">Bank Transfer
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <script src="../node_modules/preline/preline.js"></script>
+</body>
+
+</html>

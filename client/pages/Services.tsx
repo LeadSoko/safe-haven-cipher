@@ -1,183 +1,166 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function Services() {
-  const [showMegaMenu, setShowMegaMenu] = useState(false);
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Services Mega Menu - Hidden by default, shown on hover */}
-      <div 
-        className="relative"
-        onMouseEnter={() => setShowMegaMenu(true)}
-        onMouseLeave={() => setShowMegaMenu(false)}
-      >
-        {/* Trigger Area */}
-        <div className="w-full h-16 bg-transparent cursor-pointer flex items-center justify-center">
-          <span className="text-gray-700 font-semibold">Services</span>
-        </div>
-
-        {/* Mega Menu */}
-        {showMegaMenu && (
-          <section className="absolute top-16 left-0 w-full h-[533px] bg-gray-700 z-50 shadow-2xl">
-            <div className="w-full h-full flex flex-col">
-              
-              {/* Container */}
-              <div className="w-full h-[478px] bg-gray-700 relative flex">
+      {/* Services Mega Menu */}
+      <section className="w-full h-[533px] bg-gray-700 relative">
+        <div className="w-full h-full flex flex-col">
+          
+          {/* Container */}
+          <div className="w-full h-[478px] bg-gray-700 relative flex">
+            
+            {/* Left Panel - Brand & Platform Info */}
+            <div className="w-[410px] h-full bg-gray-700 flex-shrink-0">
+              <div className="px-12 pt-12">
+                {/* Brand Section */}
+                <div className="mb-8">
+                  <h1 className="text-white text-[31px] font-normal leading-10 mb-2 font-['Inter']">strobes</h1>
+                  <p className="text-gray-300 text-xs font-normal uppercase tracking-wide font-['Inter']">ENTERPRISE</p>
+                </div>
                 
-                {/* Left Panel - Brand & Platform Info */}
-                <div className="w-[410px] h-full bg-gray-700 flex-shrink-0">
-                  <div className="px-12 pt-12">
-                    {/* Brand Section */}
-                    <div className="mb-8">
-                      <h1 className="text-white text-[31px] font-normal leading-10 mb-2">strobes</h1>
-                      <p className="text-gray-300 text-xs font-normal uppercase tracking-wide">ENTERPRISE</p>
-                    </div>
-                    
-                    {/* Main Title */}
-                    <div className="mb-24">
-                      <h2 className="text-white text-[31px] font-bold leading-10">
-                        Risk-based<br />
-                        Vulnerability<br />
-                        Management Platform
-                      </h2>
-                    </div>
-                    
-                    {/* CTA Section */}
-                    <div className="mt-16">
-                      <p className="text-gray-400 text-sm mb-4">LIKE TO PARTNER WITH US?</p>
-                      <Link 
-                        to="/contact"
-                        className="inline-flex items-center border border-gray-400 bg-transparent text-gray-200 px-6 py-3 text-sm hover:bg-gray-600 transition-colors"
-                      >
-                        Contact Us
-                      </Link>
-                    </div>
-                  </div>
+                {/* Main Title */}
+                <div className="mb-24">
+                  <h2 className="text-white text-[31px] font-bold leading-10 font-['Inter']">
+                    Risk-based<br />
+                    Vulnerability<br />
+                    Management Platform
+                  </h2>
                 </div>
-
-                {/* Vertical Divider */}
-                <div className="w-[1px] h-full bg-white opacity-10"></div>
-
-                {/* Center Content - Service Categories */}
-                <div className="w-[254px] px-9 pt-12 space-y-24">
-                  
-                  {/* Application Security - Highlighted */}
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <svg width="35" height="35" viewBox="0 0 36 36" fill="none" className="stroke-white">
-                        <path d="M18.25 8.625L9.625 14.375M18.25 8.625L26.875 14.375M18.25 8.625V0M18.25 8.625L9.625 2.875L1 8.625M18.25 8.625L26.875 2.875L35.5 8.625M9.625 14.375L1 8.625M9.625 14.375V28.75M1 8.625V23L9.625 28.75M26.875 14.375L35.5 8.625M26.875 14.375V28.75M35.5 8.625V23L26.875 28.75M9.625 28.75L18.25 34.5L26.875 28.75" stroke="currentColor"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-blue-500 text-base font-bold leading-8">Application Security</h3>
-                  </div>
-
-                  {/* Network Security */}
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="stroke-white">
-                        <path d="M20 5L5 12.5V27.5L20 35L35 27.5V12.5L20 5Z" stroke="currentColor"/>
-                        <path d="M20 5L5 27.5H35L20 5ZM20 5V35M5 12.5H35" stroke="currentColor"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-white text-base font-bold leading-8">Network Security</h3>
-                  </div>
-
-                  {/* Cloud Security */}
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="stroke-white">
-                        <path d="M20 5L5 12.5V27.5L20 35L35 27.5V12.5L20 5Z" stroke="currentColor"/>
-                        <path d="M20 5L5 27.5H35L20 5ZM20 5V35M5 12.5H35" stroke="currentColor"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-white text-base font-bold leading-8">Cloud Security</h3>
-                  </div>
-
-                  {/* Staffing Services */}
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="stroke-white">
-                        <path d="M20 5L5 12.5V27.5L20 35L35 27.5V12.5L20 5Z" stroke="currentColor"/>
-                        <path d="M20 5L5 27.5H35L20 5ZM20 5V35M5 12.5H35" stroke="currentColor"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-white text-base font-bold leading-8">Staffing Services</h3>
-                  </div>
-                </div>
-
-                {/* Right Content - Service Details */}
-                <div className="w-[334px] px-6 pt-12 space-y-12">
-                  
-                  {/* Web Application Penetration Testing */}
-                  <div>
-                    <h4 className="text-blue-500 text-xl font-bold leading-8 mb-2">Web Application Penetration Testing</h4>
-                    <p className="text-white text-sm opacity-80 leading-6">Using threat intelligence and a combination of</p>
-                  </div>
-
-                  {/* Mobile Application Pentesting */}
-                  <div>
-                    <h4 className="text-blue-500 text-xl font-bold leading-8 mb-2">Mobile Application Pentesting</h4>
-                    <p className="text-white text-sm opacity-80 leading-6">Using threat intelligence and a combination of</p>
-                  </div>
-
-                  {/* Web Services & API Assessment */}
-                  <div>
-                    <h4 className="text-blue-500 text-xl font-bold leading-8 mb-2">Web Services & API Assessment</h4>
-                    <p className="text-white text-sm opacity-80 leading-6">Using threat intelligence and a combination of</p>
-                  </div>
-
-                  {/* Threat Modeling */}
-                  <div>
-                    <h4 className="text-blue-500 text-xl font-bold leading-8 mb-2">Threat Modeling</h4>
-                    <p className="text-white text-sm opacity-80 leading-6">Using threat intelligence and a combination of</p>
-                  </div>
-                </div>
-
-                {/* Featured Content Card */}
-                <div 
-                  className="w-[298px] h-[402px] bg-cover bg-center bg-no-repeat relative ml-6 mt-11"
-                  style={{
-                    backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/2b4bb15eb4ab865c923d011ad3783b5afb02ade8?width=596')",
-                    backgroundPosition: "-75px -26px",
-                    backgroundSize: "150% 113%"
-                  }}
-                >
-                  <div className="absolute inset-0 p-6">
-                    {/* Tags */}
-                    <div className="absolute top-16 left-6 flex items-center">
-                      <span className="text-white text-xs font-bold uppercase tracking-wider">Red Team</span>
-                      <span className="text-white text-sm font-bold mx-2">·</span>
-                      <span className="text-white text-sm font-bold uppercase tracking-wide">Threat Simulation</span>
-                    </div>
-                    
-                    {/* Main Title */}
-                    <div className="absolute top-[89px] left-6 w-[246px]">
-                      <h3 className="text-white text-xl font-bold leading-9">
-                        Red team vs Blue team: A CISO's Guide to Offensive Security
-                      </h3>
-                    </div>
-                    
-                    {/* CTA */}
-                    <div className="absolute bottom-[178px] left-6">
-                      <Link 
-                        to="/resources" 
-                        className="text-yellow-400 text-base font-bold hover:text-yellow-300 transition-colors"
-                      >
-                        Continue Reading
-                      </Link>
-                    </div>
-                  </div>
+                
+                {/* CTA Section */}
+                <div className="mt-16">
+                  <p className="text-gray-400 text-sm mb-4 font-['Inter']">LIKE TO PARTNER WITH US?</p>
+                  <Link 
+                    to="/contact"
+                    className="inline-flex items-center border border-gray-400 bg-transparent text-gray-200 px-6 py-3 text-sm hover:bg-gray-600 transition-colors font-['Inter']"
+                  >
+                    Contact Us
+                  </Link>
                 </div>
               </div>
             </div>
-          </section>
-        )}
-      </div>
+
+            {/* Vertical Divider */}
+            <div className="w-[1px] h-full bg-white opacity-10"></div>
+
+            {/* Center Content - Service Categories */}
+            <div className="w-[254px] px-9 pt-12 space-y-24">
+              
+              {/* Application Security - Highlighted */}
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <svg width="35" height="35" viewBox="0 0 36 36" fill="none" className="stroke-white">
+                    <path d="M18.25 8.625L9.625 14.375M18.25 8.625L26.875 14.375M18.25 8.625V0M18.25 8.625L9.625 2.875L1 8.625M18.25 8.625L26.875 2.875L35.5 8.625M9.625 14.375L1 8.625M9.625 14.375V28.75M1 8.625V23L9.625 28.75M26.875 14.375L35.5 8.625M26.875 14.375V28.75M35.5 8.625V23L26.875 28.75M9.625 28.75L18.25 34.5L26.875 28.75" stroke="currentColor"/>
+                  </svg>
+                </div>
+                <h3 className="text-blue-500 text-base font-bold leading-8 font-['Inter']">Application Security</h3>
+              </div>
+
+              {/* Network Security */}
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="stroke-white">
+                    <path d="M20 5L5 12.5V27.5L20 35L35 27.5V12.5L20 5Z" stroke="currentColor"/>
+                    <path d="M20 5L5 27.5H35L20 5ZM20 5V35M5 12.5H35" stroke="currentColor"/>
+                  </svg>
+                </div>
+                <h3 className="text-white text-base font-bold leading-8 font-['Inter']">Network Security</h3>
+              </div>
+
+              {/* Cloud Security */}
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="stroke-white">
+                    <path d="M20 5L5 12.5V27.5L20 35L35 27.5V12.5L20 5Z" stroke="currentColor"/>
+                    <path d="M20 5L5 27.5H35L20 5ZM20 5V35M5 12.5H35" stroke="currentColor"/>
+                  </svg>
+                </div>
+                <h3 className="text-white text-base font-bold leading-8 font-['Inter']">Cloud Security</h3>
+              </div>
+
+              {/* Staffing Services */}
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="stroke-white">
+                    <path d="M20 5L5 12.5V27.5L20 35L35 27.5V12.5L20 5Z" stroke="currentColor"/>
+                    <path d="M20 5L5 27.5H35L20 5ZM20 5V35M5 12.5H35" stroke="currentColor"/>
+                  </svg>
+                </div>
+                <h3 className="text-white text-base font-bold leading-8 font-['Inter']">Staffing Services</h3>
+              </div>
+            </div>
+
+            {/* Right Content - Service Details */}
+            <div className="w-[334px] px-6 pt-12 space-y-12">
+              
+              {/* Web Application Penetration Testing */}
+              <div>
+                <h4 className="text-blue-500 text-xl font-bold leading-8 mb-2 font-['Inter']">Web Application Penetration Testing</h4>
+                <p className="text-white text-sm opacity-80 leading-6 font-['Inter']">Using threat intelligence and a combination of</p>
+              </div>
+
+              {/* Mobile Application Pentesting */}
+              <div>
+                <h4 className="text-blue-500 text-xl font-bold leading-8 mb-2 font-['Inter']">Mobile Application Pentesting</h4>
+                <p className="text-white text-sm opacity-80 leading-6 font-['Inter']">Using threat intelligence and a combination of</p>
+              </div>
+
+              {/* Web Services & API Assessment */}
+              <div>
+                <h4 className="text-blue-500 text-xl font-bold leading-8 mb-2 font-['Inter']">Web Services & API Assessment</h4>
+                <p className="text-white text-sm opacity-80 leading-6 font-['Inter']">Using threat intelligence and a combination of</p>
+              </div>
+
+              {/* Threat Modeling */}
+              <div>
+                <h4 className="text-blue-500 text-xl font-bold leading-8 mb-2 font-['Inter']">Threat Modeling</h4>
+                <p className="text-white text-sm opacity-80 leading-6 font-['Inter']">Using threat intelligence and a combination of</p>
+              </div>
+            </div>
+
+            {/* Featured Content Card */}
+            <div 
+              className="w-[298px] h-[402px] bg-cover bg-center bg-no-repeat relative ml-6 mt-11"
+              style={{
+                backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/2b4bb15eb4ab865c923d011ad3783b5afb02ade8?width=596')",
+                backgroundPosition: "-75px -26px",
+                backgroundSize: "150% 113%"
+              }}
+            >
+              <div className="absolute inset-0 p-6">
+                {/* Tags */}
+                <div className="absolute top-16 left-6 flex items-center">
+                  <span className="text-white text-xs font-bold uppercase tracking-wider font-['IBM_Plex_Sans']">Red Team</span>
+                  <span className="text-white text-sm font-bold mx-2">·</span>
+                  <span className="text-white text-sm font-bold uppercase tracking-wide font-['IBM_Plex_Sans']">Threat Simulation</span>
+                </div>
+                
+                {/* Main Title */}
+                <div className="absolute top-[89px] left-6 w-[246px]">
+                  <h3 className="text-white text-xl font-bold leading-9 font-['IBM_Plex_Sans']">
+                    Red team vs Blue team: A CISO's Guide to Offensive Security
+                  </h3>
+                </div>
+                
+                {/* CTA */}
+                <div className="absolute bottom-[178px] left-6">
+                  <Link 
+                    to="/resources" 
+                    className="text-yellow-400 text-base font-bold hover:text-yellow-300 transition-colors font-['IBM_Plex_Sans']"
+                  >
+                    Continue Reading
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Additional Content Sections */}
       <section className="bg-white py-20">
@@ -202,7 +185,7 @@ export default function Services() {
                   <path d="M18.25 8.625L9.625 14.375M18.25 8.625L26.875 14.375M18.25 8.625V0M18.25 8.625L9.625 2.875L1 8.625M18.25 8.625L26.875 2.875L35.5 8.625M9.625 14.375L1 8.625M9.625 14.375V28.75M1 8.625V23L9.625 28.75M26.875 14.375L35.5 8.625M26.875 14.375V28.75M35.5 8.625V23L26.875 28.75M9.625 28.75L18.25 34.5L26.875 28.75"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Application Security</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 font-['Inter']">Application Security</h3>
               <p className="text-gray-600 mb-6">
                 Comprehensive testing of web and mobile applications to identify vulnerabilities before they can be exploited.
               </p>
@@ -219,7 +202,7 @@ export default function Services() {
                   <path d="M20 5L5 27.5H35L20 5ZM20 5V35M5 12.5H35"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Network Security</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 font-['Inter']">Network Security</h3>
               <p className="text-gray-600 mb-6">
                 Advanced network penetration testing and infrastructure security assessments to protect your digital perimeter.
               </p>
@@ -236,7 +219,7 @@ export default function Services() {
                   <path d="M20 5L5 27.5H35L20 5ZM20 5V35M5 12.5H35"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Security</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 font-['Inter']">Cloud Security</h3>
               <p className="text-gray-600 mb-6">
                 Secure your cloud infrastructure with comprehensive assessments and configuration reviews.
               </p>
@@ -255,7 +238,7 @@ export default function Services() {
                   <path d="M16 3.13a4 4 0 010 7.75"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Staffing Services</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 font-['Inter']">Staffing Services</h3>
               <p className="text-gray-600 mb-6">
                 Expert cybersecurity professionals to augment your team and provide specialized security expertise.
               </p>
@@ -275,7 +258,7 @@ export default function Services() {
             {/* Web Application Testing */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Web Application Penetration Testing</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 font-['Inter']">Web Application Penetration Testing</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Using threat intelligence and a combination of automated and manual testing techniques, 
                   we identify vulnerabilities in your web applications before malicious actors can exploit them. 
@@ -284,7 +267,7 @@ export default function Services() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Mobile Application Pentesting</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 font-['Inter']">Mobile Application Pentesting</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Comprehensive security testing for iOS and Android applications, including static and dynamic analysis, 
                   API security testing, and device-specific security assessments to ensure your mobile apps are secure 
@@ -295,7 +278,7 @@ export default function Services() {
 
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Web Services & API Assessment</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 font-['Inter']">Web Services & API Assessment</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Specialized testing for RESTful APIs, GraphQL endpoints, and web services to identify authentication bypasses, 
                   injection vulnerabilities, and business logic flaws that could compromise your backend systems and data integrity.
@@ -303,7 +286,7 @@ export default function Services() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Threat Modeling</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 font-['Inter']">Threat Modeling</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Systematic approach to identifying potential security threats and vulnerabilities in your system architecture. 
                   We help you understand your attack surface and prioritize security controls based on the most likely and 
